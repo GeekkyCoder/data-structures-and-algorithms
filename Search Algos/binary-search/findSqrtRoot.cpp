@@ -8,7 +8,7 @@ int findSquareRoot(int n)
     int mid = start + (end - start) / 2;
     int ans = -1;
 
-    for (int i = 0; i <= n; i++)
+    while (start <= end)
     {
         if (mid * mid == n)
         {
