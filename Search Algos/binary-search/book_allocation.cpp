@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
 
-bool isPossible(int arr[], int size, int mid, int noOfPainters)
+bool isPossible(int arr[], int size, int mid, int noOfStudents)
 {
-    int painterCount = 1;
-    int paintSum = 0;
+    int studentCount = 1;
+    int pageSum = 0;
 
     for (int i = 0; i < size; i++)
     {
-        if (paintSum + arr[i] <= mid)
+        if (pageSum + arr[i] <= mid)
         {
-            paintSum += arr[i];
+            pageSum += arr[i];
         }
         else
         {
-            painterCount++;
-            if (painterCount > noOfPainters || arr[i] > mid)
+            studentCount++;
+            if (studentCount > noOfStudents || arr[i] > mid)
             {
                 return false;
             }
             else
             {
-                paintSum = 0;
-                paintSum += arr[i];
+                pageSum = 0;
+                pageSum += arr[i];
             }
         }
     }
@@ -31,9 +31,9 @@ bool isPossible(int arr[], int size, int mid, int noOfPainters)
 
 int main()
 {
-    int arr[] = {5, 5, 5, 5};
+    int arr[] = {10, 20, 30, 40};
     int size = sizeof(arr) / sizeof(arr[0]);
-    int noOfPainters = 2;
+    int noOfStudents = 2;
     int start = 0;
     int sum = 0;
     int ans = -1;
@@ -49,7 +49,7 @@ int main()
 
     while (start <= end)
     {
-        if (isPossible(arr, size, mid, noOfPainters))
+        if (isPossible(arr, size, mid, noOfStudents))
         {
             ans = mid;
             end = mid - 1;
@@ -62,5 +62,5 @@ int main()
         mid = start + (end - start) / 2;
     }
 
-    cout << ans << endl;
+      cout<<ans<<endl;
 }
