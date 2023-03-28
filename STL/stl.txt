@@ -1,0 +1,38 @@
+
+STL stands for Standard Template Library in C++. 
+It is a collection of template classes and functions that 
+are used to perform common programming tasks, 
+such as sorting, searching, and manipulating data. 
+The STL provides a set of generic and efficient 
+algorithms, containers, and iterators that are widely used in C++ programming.
+
+
+The STL is divided into three main components:
+1) Containers 
+2) Algorithms 
+3) Iterators 
+
+1) Containers: 
+Containers are classes that store and organize data. 
+The STL provides several types of containers, such as vectors, 
+lists, and maps, that can be used to store and access data in different ways.
+
+
+2) Algorithms:
+Algorithms are functions that perform operations on the data 
+stored in containers. The STL provides a wide range of algorithms for sorting, 
+searching, and manipulating data, such as sort(), find(), and for_each().
+
+3) Iterators: 
+Iterators are objects that allow you to traverse the elements 
+of a container. The STL provides several types of iterators, 
+such as forward iterators, bidirectional iterators, 
+and random-access iterators, that can be used to access the elements 
+of a container in different ways.
+
+
+More about STL in C++:
+The STL is designed to be highly efficient, reusable, and easy to use, 
+making it an essential tool for C++ programmers. 
+It is widely used in the C++ programming community and is considered 
+a fundamental part of the C++ language.
