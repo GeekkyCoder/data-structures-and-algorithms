@@ -104,5 +104,15 @@ int main()
     // 0
     cout << a.size() << endl;
 
+    // * copies all the contents from one vector to another
+    vector<int> f(5, 1);
+
+    vector<int> last(f);
+
+    for (int i : last)
+    {
+        cout << i << " ";
+    }
+
     return 0;
 }
