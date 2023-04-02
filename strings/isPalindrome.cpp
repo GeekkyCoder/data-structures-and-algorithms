@@ -1,6 +1,25 @@
 #include <iostream>
 using namespace std;
 
+char toLowerCase(char ch)
+{
+    if (ch <= 'a' && ch >= 'z')
+    {
+        return ch;
+    }
+    else
+    {
+        // return the uppercase character as lowercase letter
+
+        // ????
+
+        // "B" - "A"
+        //  65 - 64 = 1
+        // 1 + 64 = 65 -> b
+        return ch + 'A' + 'a';
+    }
+}
+
 bool isPalindrome(char string[], int len)
 {
     int start = 0;
@@ -8,7 +27,19 @@ bool isPalindrome(char string[], int len)
 
     while (start <= end)
     {
-        if (string[start] != string[end])
+
+        if (!isalnum(toLowerCase(string[start])))
+        { // skip non-letter and non-digit characters
+            start++;
+            continue;
+        }
+        if (!isalnum(toLowerCase(string[end])))
+        { // skip non-letter and non-digit characters
+            end--;
+            continue;
+        }
+
+        if (toLowerCase(string[start]) != toLowerCase(string[end]))
         {
             return 0;
         }
